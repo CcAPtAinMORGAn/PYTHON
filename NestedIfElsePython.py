@@ -10,12 +10,11 @@ else:
     print("Not Qualified")
 """
 
-
-Age=int(input("Enter Age Between 25-30"))
+Age=int(input("Enter Age Between 25-30: "))
 
 if(Age>=25 and Age<30):
 
-    Salary=float(input("Enter Salary"))
+    Salary=float(input("Enter Salary: "))
 
     if(Salary>50000):
         print("Elligible For Marriage")
