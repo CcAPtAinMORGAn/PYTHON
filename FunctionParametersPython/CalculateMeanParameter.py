@@ -1,5 +1,8 @@
+import math
+
 def Calculate_Mean(number1,number2,number3,number4):
-    return ((number1+number2+number3+number4)/4)
+    numbers = [number1, number2, number3, number4]
+    return (sum(numbers)/len(numbers))
 
 number1 = 7
 number2 = 5
