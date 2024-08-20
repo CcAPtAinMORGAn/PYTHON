@@ -19,4 +19,9 @@
 # print(thislist[1])
 
 
+fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry']
+print("Fruits list:")
+for fruit in fruits:
+    print(fruit)
+
 
