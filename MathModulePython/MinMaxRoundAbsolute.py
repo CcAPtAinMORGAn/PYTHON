@@ -1,0 +1,5 @@
+print("round=",round(123.56))
+print("round=",round(123.36))
+print("absolute value=",abs(-123))
+print("max=",max(12,4,56,4,23))
+print("min=",min(12,4,56,4,23))
