@@ -24,3 +24,13 @@
 #     if(i=='h'):
 #         break
 #     print(i)
+
+# name=input("Enter Name:")
+# s="Mr "+name[0]+"."
+# for i in name:
+#     if(i==' '):
+#         n=name.find(' ')
+#         s=s+name[n+1]
+#         break
+
+# print(s)
