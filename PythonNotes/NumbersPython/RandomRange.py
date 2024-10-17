@@ -9,6 +9,7 @@ print(random.randrange(1, 10))
 # print ("returns random character from string 'Hello World' : ",
 # random.choice('Hello World'))
 
+
 # import random
 # # randomly select an odd number between 1-100
 # print ("randrange(1,100, 2) : ", random.randrange(1, 100, 2))
@@ -20,8 +21,10 @@ print(random.randrange(1, 10))
 # list = [20, 16, 10, 5];
 # random.shuffle(list)
 # print ("Reshuffled list : ", list)
-
 # #-------------------
-
 # random.shuffle(list)
 # print ("Reshuffled list : ", list)
+
+# import random
+# print ("Random Float uniform(5, 10) : ", random.uniform(5, 10))
+# print ("Random Float uniform(7, 14) : ", random.uniform(7, 14))
