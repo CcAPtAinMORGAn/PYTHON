@@ -14,3 +14,14 @@ print(random.randrange(1, 10))
 # print ("randrange(1,100, 2) : ", random.randrange(1, 100, 2))
 # # randomly select a number between 0-99
 # print ("randrange(100) : ", random.randrange(100))
+
+
+# import random
+# list = [20, 16, 10, 5];
+# random.shuffle(list)
+# print ("Reshuffled list : ", list)
+
+# #-------------------
+
+# random.shuffle(list)
+# print ("Reshuffled list : ", list)
