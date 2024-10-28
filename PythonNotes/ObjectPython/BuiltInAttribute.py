@@ -1,14 +1,18 @@
 class Employee:
     'Common base class for all employees'
     empCount = 0
+    # empSal=0
 
     def __init__(self, name, salary):
         self.name = name
         self.salary = salary
         Employee.empCount += 1
+        #If we want to add salary
+        # Employee.empSal += self.salary
 
     def displayCount(self):
         print("Total Employee:", Employee.empCount)
+        # print("Total Salary:", Employee.empSal)
 
     def displayEmploe(self):
         print("Name:", self.name, ", Salary:", self.salary)
