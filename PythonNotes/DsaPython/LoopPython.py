@@ -4,6 +4,11 @@
 # for i in st:
 #     print(i)
 
+# st = 'python'
+# for i in st[0:3]:
+#   print(i)
+
+
 # for i in range(1,6):
 #     print(i)
 #     LOOP WILL RUN FROM 1 TO 5
