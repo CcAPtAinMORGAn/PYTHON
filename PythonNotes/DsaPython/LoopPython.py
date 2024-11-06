@@ -56,5 +56,12 @@ for i in range (1,10):
 #     print(i , end='')
 #     i=i-1
 
+  
+# st = 'python'
+# i = 0  
+# while (i < 4):
+#     print(st[i])
+#     i = i + 1  
+
 ####################################
 
