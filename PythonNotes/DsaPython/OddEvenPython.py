@@ -13,6 +13,16 @@ for i in range (1,a+1):
     if(i%2==0):
         print(i," is an even number")
 
+"""
+i=int(input("Enter starting Number"))
+j=int(input("Enter ending Number"))
+
+while(i<=j):
+    i=i+1
+    if(i%2==0):
+        print(i," is even number")
+
+"""
 
 """
 #ODD  IN PYTHON
