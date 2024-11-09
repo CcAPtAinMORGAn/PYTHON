@@ -28,3 +28,24 @@ for i in range(1,6):
         print(i,j," ",end='')
     print("\n")
 
+
+
+
+# 1
+# 12
+# 123
+# 1234
+# 12345
+
+# 11
+# 21 22
+# 31 32 33
+# 41 42 43 44
+# 51 52 53 54 55
+
+for i in range(1,6):
+    for j in range(1,i+1):
+        print(j," ",end='')
+    print("\n")
+
+
