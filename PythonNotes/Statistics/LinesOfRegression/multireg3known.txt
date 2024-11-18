@@ -1,0 +1,79 @@
+import math
+x1=[2600,3000,3200,3600,4000,4100]
+
+x2=[3,4,4,3,5,6]
+
+x3=[20,15,18,30,8,8]
+
+x4=[550000,565000,610000,595000,760000,810000]
+n=len(x1)
+
+print("n is",n)
+print("sum x1 is",sum(x1))
+print("sum x2 is",sum(x2))
+print("sum x3 is",sum(x3))
+print("sum x4 is",sum(x4))
+print("\n")
+
+a=[]
+for i in range(n):
+    b=x1[i]*x1[i]
+    a.append(b)
+print("x1**2 is",a,"and sum of x1**2 is",sum(a))
+
+c=[]
+for j in range(n):
+    d=x2[j]*x2[j]
+    c.append(d)
+print("x2**2 is",c,"and sum of x2**2 is",sum(c))
+
+e=[]
+for k in range(n):
+    f=x3[k]*x3[k]
+    e.append(f)
+print("x3**2 is",e,"and sum of x3**2 is",sum(e))
+
+x4_square=[]
+for x4_var in range(n):
+    g=x4[x4_var]*x4[x4_var]
+    x4_square.append(g)
+print("x4**2 is",x4_square,"and sum of x4**2 is",sum(x4_square),"\n")
+
+#------------------------------------------------- X1*X2 X1*X3 X2*X3
+h=[]
+for l in range(n):
+    y=x1[l]*x2[l]
+    h.append(y)
+print("x1*X2 is",h,"and sum of x1*X2 is",sum(h))
+
+k=[]
+for o in range(n):
+    m=x1[o]*x3[o]
+    k.append(m)
+print("x1*X3 is",k,"and sum of X1*X3 is",sum(k))
+
+x1_x4=[]
+for x1_x4_range in range(n):
+    u=x1[x1_x4_range]*x4[x1_x4_range]
+    x1_x4.append(u)
+print("X1*X4 is",x1_x4,"and sum of X1*X4 is",sum(x1_x4))
+
+print("\n")
+x2x3=[]
+for x2_x3 in range(n):
+    x2x3_logic=x2[x2_x3]*x3[x2_x3]
+    x2x3.append(x2x3_logic)
+print("X2*X3 is",x2x3,"and sum of X2*X3 is",sum(x2x3))
+
+x2x4=[]
+for x2_x4 in range(n):
+    x2x4_logic=x2[x2_x4]*x4[x2_x4]
+    x2x4.append(x2x4_logic)
+print("X2*X4 is",x2x4,"and sum of X2*X4 is",sum(x2x4))
+
+x3x4=[]
+for x3_x4 in range(n):
+    x3x4_logic=x3[x3_x4]*x4[x3_x4]
+    x3x4.append(x3x4_logic)
+print("X3*X4 is",x3x4,"and sum of X3*X4 is",sum(x3x4))
+
