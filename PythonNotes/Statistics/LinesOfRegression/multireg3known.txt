@@ -1,19 +1,28 @@
 import math
-x4=[2600,3000,3200,3600,4000,4100]
-
-x3=[3,4,4,3,5,6]
-
-x2=[20,15,18,30,8,8]
 
 x1=[550000,565000,610000,595000,760000,810000]
 
+x2=[20,15,18,30,8,8]
+
+x3=[3,4,4,3,5,6]
+
+x4=[2600,3000,3200,3600,4000,4100]
+
+
+
+
 n=len(x1)
 
+sum_x1= sum(x1)
+sum_x2= sum(x2)
+sum_x3= sum(x3)
+sum_x4= sum(x4)
+
 print("n is",n)
-print("sum x1 is",sum(x1))
-print("sum x2 is",sum(x2))
-print("sum x3 is",sum(x3))
-print("sum x4 is",sum(x4))
+print("sum x1 is",sum_x1)
+print("sum x2 is",sum_x2)
+print("sum x3 is",sum_x3)
+print("sum x4 is",sum_x4)
 print("\n")
 
 a=[]
@@ -27,13 +36,15 @@ for j in range(n):
     d=x2[j]*x2[j]
     c.append(d)
 print("x2**2 is",c,"and sum of x2**2 is",sum(c))
+sum_x2_raised_2 = sum(c)
+
 
 e=[]
 for k in range(n):
     f=x3[k]*x3[k]
     e.append(f)
 print("x3**2 is",e,"and sum of x3**2 is",sum(e))
-
+sum_x3_raised_2 = sum(e)
 x4_square=[]
 for x4_var in range(n):
     g=x4[x4_var]*x4[x4_var]
@@ -47,11 +58,15 @@ for l in range(n):
     h.append(y)
 print("x1*X2 is",h,"and sum of x1*X2 is",sum(h))
 
+sum_x1x2=sum(h)
+
 k=[]
 for o in range(n):
     m=x1[o]*x3[o]
     k.append(m)
 print("x1*X3 is",k,"and sum of X1*X3 is",sum(k))
+sum_x1x3 = sum(k)
+
 
 x1_x4=[]
 for x1_x4_range in range(n):
@@ -65,17 +80,79 @@ for x2_x3 in range(n):
     x2x3_logic=x2[x2_x3]*x3[x2_x3]
     x2x3.append(x2x3_logic)
 print("X2*X3 is",x2x3,"and sum of X2*X3 is",sum(x2x3))
+sum_x2x3 = sum(x2x3)
 
 x2x4=[]
 for x2_x4 in range(n):
     x2x4_logic=x2[x2_x4]*x4[x2_x4]
     x2x4.append(x2x4_logic)
 print("X2*X4 is",x2x4,"and sum of X2*X4 is",sum(x2x4))
+sum_x2x4 = sum(x2x4)
 
 x3x4=[]
 for x3_x4 in range(n):
     x3x4_logic=x3[x3_x4]*x4[x3_x4]
     x3x4.append(x3x4_logic)
 print("X3*X4 is",x3x4,"and sum of X3*X4 is",sum(x3x4))
+sum_x3x4 = sum(x3x4)
 
+print("\n")
+
+# ------------summision_x1_equation
+from sympy import symbols
+
+b1, b2 , b3 , a= symbols('b1 b2 b3 a')
+
+summision_x1_equation = (n*a) + (sum_x2*b1) + (sum_x3 * b2) + (sum_x4 * b3) - sum_x1
+
+print("summision_x1_equation =",summision_x1_equation)
+
+# summision_x1*x2_equation
+print("\n")
+
+sum_x1x2_equation = (sum_x2 * a) + (sum_x2_raised_2 * b1) + (sum_x2x3 * b2) + (sum_x2x4 * b3) - sum_x1x2
+print("summision_x1x2_equation =",sum_x1x2_equation)
+
+print("\n")
+
+# summision_x1*x3_equation
+
+sum_x1x3_equation = (sum_x3 * a) + (sum_x3_raised_2 * b1) + (sum_x2x3 * b2) + (sum_x3x4 * b3) - sum_x1x3
+print("summision_x1x3_equation =",sum_x1x3_equation)
+
+print("\n")
+from sympy import expand
+
+summision_x1_equation_expanded = expand(summision_x1_equation)
+
+sum_x1x2_equation_expanded = expand(sum_x1x2_equation)
+
+Z = (summision_x1_equation_expanded * sum_x2) - (sum_x1x2_equation_expanded * n)
+
+# Print the expanded forms
+print("Equation 1 is", summision_x1_equation_expanded)
+print("Equation 2 is", sum_x1x2_equation_expanded)
+
+print("\n")
+
+print("Equation 1 * sum_x2 - Equation 2 * n =",Z)
+
+sum_x1x3_equation_expanded = expand(sum_x1x3_equation)
+
+Z_a = (summision_x1_equation_expanded * sum_x3) - (sum_x1x3_equation_expanded * n)
+
+print("\n")
+
+print("Equation 1 * sum_x3 - Equation 3 * n =",Z_a)
+
+print("\n")
+from sympy import expand
+
+Z_expanded = expand(Z)
+
+Z_a_expanded = expand(Z_a)
+
+Eqn_a_subtract_b = (Z_expanded * 15500) - (Z_a_expanded * 65100)
+
+print("Eqn_Z_subtract_Z_a =",Eqn_a_subtract_b)
 
