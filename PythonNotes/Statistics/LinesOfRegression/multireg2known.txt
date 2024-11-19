@@ -56,8 +56,69 @@ print("X2*X3 is",x2x3,"and sum of X2*X3 is",sum(x2x3))
 
 
 #-------------------------------------------------
-x___=(34*b1)-(38*b2)-194
-y___=(38*b1)-(34*b2)-57
-print("x =",x___*34)
-print("y =",y___*38)
+# Constants
+A = 34
+B = 38
+sum x1_ 37
+sum x2 is 73
+sum x3 is 21
+n=5
+
+X=346
+Y=38
+
+N=38
+G=34
+# Define symbolic variables
+from sympy import symbols
+
+b1, b2 = symbols('b1 b2')
+
+# Expressions for x and y
+x_expr = ((X * b1) - (Y * b2) - 194) * A
+y_expr = ((N * b1) - (G * b2) - 57) * B
+
+# Simplify the expressions and print them
+from sympy import expand
+
+x_expanded = expand(x_expr)
+y_expanded = expand(y_expr)
+Z=x_expanded-y_expanded
+# Print the expanded forms
+print("Equation 1 is", x_expanded)
+print("Equation 2 is", y_expanded)
+print("Equation 1 - Equation 2 =",Z)
+
+from sympy import symbols, Eq, solve
+
+
+# Define the equation 0 = 10320*b1 - 4430
+equation = Eq(Z, 0)
+
+solution_b1 = solve(equation, b1)
+
+# Convert the solution to decimal
+decimal_solution_b1 = solution_b1[0].evalf()
+
+# Print the result as a decimal
+print("b1 =", decimal_solution_b1)
+
+summision_x1=sum(x1)
+summision_x2=sum(x2)
+summision_x3=sum(x3)
+
+from sympy import symbols
+
+summision_x1, summision_x2 ,summision_x3 = symbols('summision_x1 summision_x2 summision_x3')
+
+summision_x1_equation=(n*a)+(b1*summision_x2)+(b2*summision_x3)-summision_x1
+
+from sympy import expand
+
+x_summision_x1_expanded = expand(summision_x1_equation)
+
+# Print the expanded forms
+print("Equation summision_x1 is", x_summision_x1_expanded)
+
+
 
