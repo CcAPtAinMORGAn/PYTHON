@@ -152,7 +152,13 @@ Z_expanded = expand(Z)
 
 Z_a_expanded = expand(Z_a)
 
-Eqn_a_subtract_b = (Z_expanded * 15500) - (Z_a_expanded * 65100)
+Eqn_a_subtract_b = (Z_expanded * 15500) - (-1 * Z_a_expanded * 65100)
+
+# (-1 * Z_a_expanded * 65100) multiplied by -1 on both sides because b3 becomes positive while subtracting and doesnt get eliminated
 
 print("Eqn_Z_subtract_Z_a =",Eqn_a_subtract_b)
+
+b2 = -797.02 - 0.86 * b1 
+
+print(b2)
 
