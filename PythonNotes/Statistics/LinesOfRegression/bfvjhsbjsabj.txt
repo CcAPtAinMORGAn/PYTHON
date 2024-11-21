@@ -1,0 +1,43 @@
+
+import numpy as np
+
+# Data points (price, age, bedroom, area)
+X = np.array([
+    [1, 20, 3, 2600], 
+    [1, 15, 4, 3000], 
+    [1, 18, 4, 3200], 
+    [1, 30, 3, 3600], 
+    [1, 8, 5, 4000], 
+    [1, 8, 6, 4100]
+])
+
+# Prices (y)
+Y = np.array([550000, 565000, 610000, 595000, 760000, 810000])
+
+# Calculate beta coefficients
+X_transpose = X.T
+
+print(X_transpose)
+print("\n")
+beta = np.linalg.inv(X_transpose @ X) @ X_transpose @ Y
+
+print("xT_x inverse is ","\n",np.linalg.inv(X_transpose @ X))
+
+print("\n")
+
+print("x_t_y is this","\n",X_transpose @ Y)
+
+print("\n")
+# Set printing options to avoid scientific notation
+np.set_printoptions(precision=4, suppress=True)
+
+print("beta is this ",beta)
+print("\n")
+# Predict price for x2 = 40, x3 = 3, x4 = 3000 (age, bedrooms, area)
+new_data = np.array([1, 40, 3, 3000])  # Adding 1 for the intercept
+
+print("coeff to be multiplied is this ",new_data)
+print("\n")
+predicted_price = new_data @ beta
+
+print("x1 ",predicted_price)
