@@ -11,14 +11,23 @@ X = np.array([
     [1, 8, 6, 4100]
 ])
 
+print("This is X ","\n",X)
+print("\n")
+
 # Prices (y)
 Y = np.array([550000, 565000, 610000, 595000, 760000, 810000])
-
+print("This is Y ",Y)
+print("\n")
 # Calculate beta coefficients
 X_transpose = X.T
 
-print(X_transpose)
+print("X_transpose is this ","\n",X_transpose)
 print("\n")
+
+print("XT_X is this","\n",X_transpose @ X)
+
+print("\n")
+
 beta = np.linalg.inv(X_transpose @ X) @ X_transpose @ Y
 
 print("xT_x inverse is ","\n",np.linalg.inv(X_transpose @ X))
