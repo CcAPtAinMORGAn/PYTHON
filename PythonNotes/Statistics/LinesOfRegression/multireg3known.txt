@@ -8,9 +8,6 @@ x3=[3,4,4,3,5,6]
 
 x4=[2600,3000,3200,3600,4000,4100]
 
-
-
-
 n=len(x1)
 
 sum_x1= sum(x1)
@@ -158,7 +155,8 @@ Eqn_a_subtract_b = (Z_expanded * 15500) - (-1 * Z_a_expanded * 65100)
 
 print("Eqn_Z_subtract_Z_a =",Eqn_a_subtract_b)
 
-b2 = -797.02 - 0.86 * b1 
+b2 = -797.02 - (0.86 * b1) # Formed equation in form of b2 to substitute in Eqn_a_subtract_b to find value of b1   
 
-print(b2)
+print("b2 =",b2)
 
+subs_b2_in_Eqn_a_subtract_b = 85820400*b1 - 99882000*b2 - 79608000000
