@@ -140,6 +140,7 @@ Z_a = (summision_x1_equation_expanded * sum_x3) - (sum_x1x3_equation_expanded * 
 
 print("\n")
 
+
 print("Equation 1 * sum_x3 - Equation 3 * n =",Z_a)
 
 print("\n")
@@ -160,3 +161,88 @@ b2 = -797.02 - (0.86 * b1) # Formed equation in form of b2 to substitute in Eqn_
 print("b2 =",b2)
 
 subs_b2_in_Eqn_a_subtract_b = 85820400*b1 - 99882000*b2 - 79608000000
+
+print("Substituting b2 in (equation a  -  equation b) =",subs_b2_in_Eqn_a_subtract_b)
+
+# subs_b2_in_Eqn_a_subtract_b = 171718920.0*b1 - 48360.0
+
+from sympy import symbols, Eq, solve
+
+
+# Define the equation 0 = 171718920.0*b1 - 48360.0
+
+equation = Eq(subs_b2_in_Eqn_a_subtract_b, 0)
+
+solution_b1 = solve(equation, b1)
+
+# Convert the solution to decimal
+b1 = solution_b1[0].evalf()
+
+# Print the result as a decimal
+print("b1 =", b1)
+
+b2 = -797.02 - (0.86 * b1)
+print("b2 =",b2)
+
+print("\n")
+
+#substituting b1 and b2 in summision_x1_equation
+summision_x1_equation = (n*a) + (sum_x2*b1) + (sum_x3 * b2) + (sum_x4 * b3) - sum_x1
+
+print("summision_x1_equation after substituting b1 and b2 =",summision_x1_equation)
+
+sum_x1x2_equation = (sum_x2 * a) + (sum_x2_raised_2 * b1) + (sum_x2x3 * b2) + (sum_x2x4 * b3) - sum_x1x2
+print("summision_x1x2_equation after substituting b1 and b2 =",sum_x1x2_equation)
+
+print("\n")
+from sympy import expand
+
+
+summision_x1_equation_expanded = expand(summision_x1_equation)
+
+sum_x1x2_equation_expanded = expand(sum_x1x2_equation)
+
+Z_after_substituting_b1b2 = (summision_x1_equation_expanded * sum_x2) - (sum_x1x2_equation_expanded * n)
+
+print("Equation 1 * sum_x2 - Equation 2 * n = after substituting b1 and b2",Z_after_substituting_b1b2)
+
+Z_after_substituting_b1b2 = 65100*b3 - 20123240.7421849
+
+#-----------------finding b3
+from sympy import symbols, Eq, solve
+
+# Z_after_substituting_b1b2 = 65100*b3 - 20123240.7421849
+equation = Eq(Z_after_substituting_b1b2, 0)
+
+solution_b3 = solve(equation, b3)
+
+# Convert the solution to decimal
+b3 = solution_b3[0].evalf()
+
+# Print the result as a decimal
+print("b3 =", b3)
+
+summision_x1_equation = (n*a) + (sum_x2*b1) + (sum_x3 * b2) + (sum_x4 * b3) - sum_x1
+
+print("summision_x1_equation after substituting b1 b2 b3 =",summision_x1_equation)
+
+from sympy import symbols, Eq, solve
+
+# summision_x1_equation = (n*a) + (sum_x2*b1) + (sum_x3 * b2) + (sum_x4 * b3) - sum_x1
+equation = Eq(summision_x1_equation, 0)
+
+solution_a = solve(equation, a)
+
+# Convert the solution to decimal
+a = solution_a[0].evalf()
+
+# Print the result as a decimal
+print("a =", a)
+
+x2_given_extra_value = 40
+x3_given_extra_value = 3
+x4_given_extra_value = 3000
+
+x1_predicted_value = a + (b1*x2_given_extra_value) + (b2*x3_given_extra_value) + (b3*x4_given_extra_value)
+
+print("x1_predicted_value =",x1_predicted_value)
