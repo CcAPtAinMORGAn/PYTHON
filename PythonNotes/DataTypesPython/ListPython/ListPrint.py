@@ -4,6 +4,7 @@
 ## Changeable: The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
 ## Allow Duplicates: Since lists are indexed, lists can have items with the same value.
 
+# Arrays are homogeneous (all elements of the same type), while lists are heterogeneous (elements can be different).
 
 # mylist = ['apple','mango','banana']
 # print(mylist)
