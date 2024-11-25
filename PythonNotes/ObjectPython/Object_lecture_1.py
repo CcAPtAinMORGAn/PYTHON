@@ -114,6 +114,16 @@ p1 = myclass()
 print(p1.variable())
 
 
+#-------------------------------------------------------------------------
+class myclass:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        
+p1 = myclass("Alice" , 25)
+
+print(p1.name)
+
 
 
 
