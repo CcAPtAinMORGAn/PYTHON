@@ -124,6 +124,16 @@ p1 = myclass("Alice" , 25)
 
 print(p1.name)
 
+# class myclass:
+#     def __init__(self,x):
+#         self.x = x
+#         self.i =[]
+#         for i in range(1,11):
+#             self.i.append(i)
+# p1 = myclass(5)
+
+# print(p1.x)
+# print(p1.i)
 
 
 
