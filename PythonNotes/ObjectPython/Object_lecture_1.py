@@ -124,6 +124,24 @@ p1 = myclass("Alice" , 25)
 
 print(p1.name)
 
+
+
+
+class myclass:
+  def __init__(self,):
+    self.x = 5
+    
+    
+p1 = myclass()
+
+print(p1.x)
+
+
+
+
+
+
+
 # class myclass:
 #     def __init__(self,x):
 #         self.x = x
