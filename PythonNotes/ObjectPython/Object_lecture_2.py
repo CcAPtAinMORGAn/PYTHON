@@ -1,4 +1,24 @@
 
+
+def var(x,a):
+  
+  y = x + a
+  
+
+  print(y)
+
+x = 5
+
+a  = 10
+
+var(x,a)
+
+
+
+
+
+
+
 class myclass:
   def prime(self):
     x = 10
