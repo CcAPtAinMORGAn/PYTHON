@@ -157,16 +157,17 @@ print(p1.x)
 #-------------------------------------------------------------------------
 
 
+
 # class myclass:
 #     def __init__(self,x):
 #         self.x = x
-#         self.i =[]
+#         self.a =[]
 #         for i in range(1,11):
-#             self.i.append(i)
+#             self.a.append(i)
 # p1 = myclass(5)
 
 # print(p1.x)
-# print(p1.i)
+# print(p1.a)
 
 #-------------------------------------------------------------------------
 
