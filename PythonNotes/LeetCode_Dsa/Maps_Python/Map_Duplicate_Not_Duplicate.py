@@ -1,28 +1,21 @@
-nums = [2, 8, 10, 10, 11,10,11,11]
+
+nums = [1,2,3,10,10]
+
 
 n = len(nums)
 
 map = {}
 
-
-x = -1
-
 for i in range(n):
   
-  if nums[i] in map:
-    print(nums[i])
-    
-      
-  else:
-    x+=1
-    map[nums[i]] = x
+  map[nums[i]] = i
   
-      
 print(map)
 
-print(map[10])
+x = len(map)
 
-print(map[11])
+if(x<n):
+  print("contains duplicate")
   
-print(map[2])
-    
+else:
+  print("Doesn't contain duplicate")
