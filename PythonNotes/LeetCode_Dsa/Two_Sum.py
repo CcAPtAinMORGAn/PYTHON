@@ -1,24 +1,26 @@
-
-nums = [2,7,11,15]
+nums = [2,5,11,7]
 
 target = 9
 
-numMap = {}
 n = len(nums)
+
+map = {}
+
 
 for i in range(n):
   
-    x = target - nums[i]
-    
-    # print(x)
-    
-    if x in numMap:
-      print(numMap[x], i)
-    
-    
-    numMap[nums[i]] = i
-    
-    
+  x = target - nums[i]
+  
+  if x in map:
+    print(map[x] , i )
+    break
+  
+  map[nums[i]] = i
+
+  print(map)  
+  
+  
+
     # map = [2   ]
     # 9 - 2 = 7     2 is stored in num map
     # 9 - 7 = 2     2 is found in num map
