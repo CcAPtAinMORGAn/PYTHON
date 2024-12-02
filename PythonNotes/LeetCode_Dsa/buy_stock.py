@@ -1,29 +1,26 @@
 
-
 prices = [7,2,1,5,3,4,6]
 
 n = len(prices)
 
-buy_price = prices[0]
+x = prices[0]
 
 profit = 0
 
-buy_position = 0
-
-
-
 for i in range(n):
-  if(buy_price > prices[i]):
+  if( prices[i] < x ):
     
-    buy_price = prices[i]
-    
-    buy_position = i
-            
-  profit = max(profit, prices[i] - buy_price)
+    x = prices[i]
   
-print("Buy at position",buy_position)
-
+  
+  if(profit < prices[i] - x):
+    profit = prices[i] - x
+  
 print(profit)
+  
+  
+print(x)
+
 
 # buy price = 7
 # profit = 0
